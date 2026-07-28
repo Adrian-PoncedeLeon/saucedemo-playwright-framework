@@ -5,4 +5,4 @@ def test_product_added_to_cart(login_page):
     cart_page = inventory_page.go_to_cart()
 
     assert cart_page.is_loaded()
-    assert cart_page.product_exists("AAASauce Labs Bolt T-Shirt")
+    assert cart_page.product_exists("Sauce Labs Bolt T-Shirt")

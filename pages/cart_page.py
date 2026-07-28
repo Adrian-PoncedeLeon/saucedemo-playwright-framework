@@ -1,4 +1,5 @@
 from pages.base_page import BasePage
+from pages.checkout_step1_page import CheckoutPage1
 
 class CartPage(BasePage):
 
@@ -21,3 +22,7 @@ class CartPage(BasePage):
             return False
         else:
             return True
+        
+    def click_checkout_button(self):
+        self.page.locator("button#checkout").click()
+        return CheckoutPage1(self.page)
