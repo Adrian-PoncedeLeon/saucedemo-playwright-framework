@@ -15,4 +15,9 @@ def page():
 @pytest.fixture
 def login_page(page):
     return LoginPage(page)
+
+@pytest.fixture
+def inventory_page(login_page):
+    login_page.navigate()
+    return login_page.login("standard_user", "secret_sauce")
     
